@@ -1,0 +1,14 @@
+row_number;id;client;creation_date;delivery_date;delivery_address;contact_phone;contact_email;margin
+2;2698-56-LE24;I MUNICIPALIDAD DE CARTAGENA;2024-11-29;2024-12-29;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+3;3736-76-LE24;I MUNICIPALIDAD DE LAJA;2024-08-08;2024-09-07;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+4;1110404-7-LE25;SERVICIO LOCAL DE EDUCACION DE CHINCHORRO;2025-02-03;2025-03-05;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+5;2289-53-LE23;I MUNICIPALIDAD DE FRUTILLAR;2023-11-22;2023-12-22;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+6;5586-9-LE24-2;UNIVERSIDAD DE LA FRONTERA;2024-03-01;2024-03-31;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+7;2306-267-LE24;I MUNICIPALIDAD DE OSORNO;2025-02-13;2025-03-15;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+8;5768-5-LR24;UNIVERSIDAD DE CHILE;2025-05-15;2025-06-14;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+9;4404-35-LE25;I MUNICIPALIDAD DE SAN CLEMENTE;2025-06-23;2025-07-23;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+10;3349-83-LE24;COMANDO DE APOYO A LA FUERZA;2024-08-22;2024-09-21;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+11;94-22-LE23;SERVICIO NACIONAL DEL PATRIMONIO CULTURAL;2023-12-12;2024-01-11;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+12;2686-51-LE25;I MUNICIPALIDAD DE COLINA;2025-05-30;2025-06-29;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+13;2770-37-LE25;I MUNICIPALIDAD DE MAIPU;2025-06-05;2025-07-05;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
+14;4928-61-LE23;DIRECCION DE LOGISTICA DE CARABINEROS;2024-01-24;2024-02-23;Direccion de Prueba 9999, San Fernando;56997256637;prueba@prueba.cl;0.4
