@@ -1,79 +1,116 @@
-Desafío de Análisis de Licitaciones - Kaiken
-Este README es un documento vivo y se actualizará progresivamente con cada avance del proyecto.
+# Mini Sistema de Gestión de Licitaciones
 
-Versión: 0.1.0
-Última actualización: 25 de agosto de 2025
+Este proyecto es una aplicación web creada como solución al desafío técnico de Kaiken. El sistema funciona como una herramienta interna para que un equipo comercial pueda registrar y analizar licitaciones públicas adjudicadas.
 
-Descripción
-Este proyecto tiene como objetivo analizar datos de licitaciones para identificar patrones, tendencias y oportunidades. El análisis se centra en la relación entre productos, órdenes de compra y clientes en el contexto de licitaciones públicas o privadas.
+[](https://www.google.com/search?q=https://URL-DE-TU-APP-DESPLEGADA.streamlit.app/)
 
-El pipeline de trabajo actual consiste en:
+## ✨ Características Principales
 
-Exploración y Limpieza de Datos con Python (Jupyter Notebooks).
+  * **Dashboard Interactivo:** Métricas clave y gráficos avanzados (rentabilidad, Pareto, tendencias) para la toma de decisiones estratégicas, con filtros dinámicos.
+  * **Gestión de Licitaciones (CRUD):** Permite crear nuevas licitaciones, buscar, visualizar un análisis completo y editar registros existentes.
+  * **Gestión de Clientes (CRUD):** Permite agregar y editar clientes, con validación de RUT chileno a nivel de aplicación y base de datos.
+  * **Gestión de Productos (CRUD):** Interfaz para agregar y editar los productos de la empresa.
+  * **Integridad de Datos:** Reglas de negocio implementadas tanto en la aplicación como en la base de datos (PostgreSQL) para garantizar la consistencia y seguridad de la información.
 
-Estructuración de Datos en un esquema de base de datos relacional.
+## 🛠️ Stack Tecnológico
 
-(Futuro) Análisis y Visualización para extraer insights.
+  * **Frontend:** Streamlit
+  * **Backend & Base de Datos:** Supabase (PostgreSQL)
+  * **Lenguaje:** Python
+  * **Librerías Clave:** Pandas (manipulación de datos), Plotly (visualizaciones), Psycopg2 (conexión a DB).
+  * **Despliegue:** Streamlit Community Cloud
 
-Estructura del Proyecto
-El repositorio está organizado de la siguiente manera para mantener un flujo de trabajo claro y ordenado.
+-----
 
-.
-│   README.md                # Documentación principal del proyecto
-│
-├───scripts/                 # Contiene todos los scripts de análisis y procesamiento
-│   │   01.Datos de Muestra.ipynb  # Notebook para exploración y limpieza de datos
-│   │
-│   └───data/                # Almacena los datasets
-│           clientes_sample.csv
-│           order_sample.csv
-│           product_sample.csv
-│           tender_sample.csv
-│           order_sample_clean.csv      # Archivos procesados y limpios
-│           product_sample_clean.csv
-│           tender_sample_clean.csv
-│
-└───sql/                     # Scripts para la gestión de la base de datos
-        01.Crea tablas.sql       # Script DDL para crear la estructura de las tablas
-Cómo Empezar
-Para replicar el análisis, sigue estos pasos:
+## 🚀 Implementación y Puesta en Marcha
 
-Prerrequisitos
-Tener instalado Python 3.x.
+Para ejecutar este proyecto en un entorno local, sigue estos pasos:
 
-Tener instalado un gestor de paquetes como pip o conda.
+### **1. Prerrequisitos**
 
-(Opcional) Un motor de base de datos compatible con SQL (ej. PostgreSQL, SQLite).
+  * Tener instalado Python 3.9+ y Git.
+  * Una cuenta gratuita en [Supabase](https://supabase.com/) para crear la base de datos PostgreSQL.
 
-Instalación
-Clona este repositorio:
+### **2. Clonar el Repositorio**
 
-Bash
-
-git clone <URL-de-tu-repositorio>
+```bash
+git clone https://github.com/albert-bq/desafio-licitaciones-kaiken.git
 cd desafio-licitaciones-kaiken
-(Recomendado) Crea un entorno virtual e instala las dependencias:
+```
 
-Bash
+### **3. Configurar el Entorno Virtual**
 
+Es una buena práctica aislar las dependencias del proyecto.
+
+```bash
+# Crear el entorno
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-pip install -r requirements.txt # AÚN NO CREADO
-Uso
-Ejecutar el Notebook: Abre y ejecuta el archivo scripts/01.Datos de Muestra.ipynb utilizando Jupyter Lab o Jupyter Notebook para procesar los datos de la carpeta scripts/data/.
 
-Crear la Base de Datos: Ejecuta el script sql/01.Crea tablas.sql en tu motor de base de datos para generar la estructura necesaria.
+# Activar el entorno
+# En Windows:
+venv\Scripts\activate
+# En macOS/Linux:
+source venv/bin/activate
+```
 
-Próximos Pasos (TODO)
-Esta sección se actualizará con cada commit para reflejar el progreso y las tareas pendientes.
+### **4. Instalar Dependencias**
 
-[ ] Crear el archivo requirements.txt con las librerías necesarias (pandas, numpy, etc.).
+El archivo `requirements.txt` contiene todas las librerías necesarias.
 
-[ ] Desarrollar un script en Python para cargar los archivos .csv limpios a la base de datos SQL.
+```bash
+pip install -r requirements.txt
+```
 
-[ ] Añadir análisis estadísticos descriptivos en el notebook.
+### **5. Configurar la Base de Datos**
 
-[ ] Generar las primeras visualizaciones para identificar relaciones clave.
+  * Crea un nuevo proyecto en **Supabase**.
+  * Ve a **Project Settings \> Database** y copia tus credenciales de conexión.
+  * Ve al **SQL Editor** de tu proyecto Supabase.
+  * Copia y ejecuta el contenido de los archivos en la carpeta `sql/` en el siguiente orden:
+    1.  `01.Crea tablas.sql`
+    2.  `02.Reglas del Negocio.sql`
+    3.  `03.RUT Chileno.sql`
 
-[ ] Documentar los hallazgos iniciales del análisis exploratorio.
+### **6. Configurar los Secretos**
 
+La aplicación se conecta a la base de datos de forma segura a través de un archivo de secretos.
+
+  * En la raíz del proyecto, crea una carpeta llamada `.streamlit`.
+  * Dentro de esa carpeta, crea un archivo llamado `secrets.toml`.
+  * Copia y pega el siguiente contenido, reemplazando los valores con tus credenciales de Supabase (se recomienda usar la conexión **Session Pooler**):
+
+<!-- end list -->
+
+```toml
+[database]
+host = "tu-host-de-supabase"
+port = "6543"
+dbname = "postgres"
+user = "tu-usuario-de-supabase"
+password = "tu-contraseña-de-supabase"
+```
+
+### **7. Ejecutar la Aplicación**
+
+Una vez configurado todo, inicia la aplicación con el siguiente comando:
+
+```bash
+streamlit run app.py
+```
+
+Se abrirá una pestaña en tu navegador con la aplicación funcionando localmente.
+
+-----
+
+## 📁 Estructura del Proyecto
+
+```
+.
+├─── .streamlit/
+│    └── secrets.toml      # Archivo de credenciales (ignorado por Git)
+├─── scripts/              # Notebooks y scripts auxiliares
+├─── sql/                  # Scripts para la creación y configuración de la DB
+├─── app.py                # Código principal de la aplicación Streamlit
+├─── README.md             # Documentación del proyecto
+└─── requirements.txt      # Dependencias de Python
+```
