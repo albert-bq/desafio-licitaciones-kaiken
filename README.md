@@ -1,8 +1,8 @@
-# Mini Sistema de Gestión de Licitaciones
+# Mini Sistema de Gestión de L-icitaciones
 
-Este proyecto es una aplicación web creada como solución al desafío técnico de Kaiken. El sistema funciona como una herramienta interna para que un equipo comercial pueda registrar y analizar licitaciones públicas adjudicadas.
+Este proyecto es una aplicación web creada como solución al desafío técnico de Kaiken...
 
-[](https://www.google.com/search?q=https://URL-DE-TU-APP-DESPLEGADA.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://desafio-licitaciones-kaiken.streamlit.app/)
 
 ## ✨ Características Principales
 
